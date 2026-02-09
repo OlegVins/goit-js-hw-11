@@ -9,8 +9,7 @@ const lightbox = new SimpleLightbox('.gallery a', {
 });
 
 export function createGallery(images) {
-    const markup = images.map(image => {
-        return
+    const markup = images.map(image => 
         `<li class="gallery-item">
         <a href="${image.largeImageURL}">
         <img
@@ -24,9 +23,9 @@ export function createGallery(images) {
         <p><b>Comments:</b> ${image.comments}</p>
         <p><b>Downloads:</b> ${image.downloads}</p>
         </div>
-        </li>`;
-    }).join('');
-    
+        </li>`
+    ).join('');
+
     galleryEl.insertAdjacentHTML('beforeend', markup);
     lightbox.refresh();
 }
